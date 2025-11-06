@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Modern Light Mode Variables */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --text-tertiary: #6b7280;
+    --text-accent: #7c3aed;
+    --border-primary: #e5e7eb;
+    --border-secondary: #d1d5db;
+    --interactive-hover: #f3f4f6;
+    --interactive-active: #e5e7eb;
+  }
+
+  .dark {
+    /* Elite Dark Mode Variables */
+    --bg-primary: #0f0f0f;
+    --bg-secondary: #1a1a1a;
+    --bg-tertiary: #252525;
+    --text-primary: #f5f5f5;
+    --text-secondary: #d4d4d4;
+    --text-tertiary: #a3a3a3;
+    --text-accent: #a78bfa;
+    --border-primary: #2a2a2a;
+    --border-secondary: #3a3a3a;
+    --interactive-hover: #1f1f1f;
+    --interactive-active: #2a2a2a;
+  }
+
+  * {
+    @apply transition-colors duration-300;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  /* Allow text selection in input fields and textareas */
+  input,
+  textarea {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent-primary to-accent-hover bg-clip-text text-transparent;
+  }
+
+  .bg-theme-primary {
+    background-color: var(--bg-primary);
+  }
+
+  .bg-theme-secondary {
+    background-color: var(--bg-secondary);
+  }
+
+  .bg-theme-tertiary {
+    background-color: var(--bg-tertiary);
+  }
+
+  .text-theme-primary {
+    color: var(--text-primary);
+  }
+
+  .text-theme-secondary {
+    color: var(--text-secondary);
+  }
+
+  .text-theme-tertiary {
+    color: var(--text-tertiary);
+  }
+
+  .text-theme-accent {
+    color: var(--text-accent);
+  }
+
+  .border-theme-primary {
+    border-color: var(--border-primary);
+  }
+
+  .border-theme-secondary {
+    border-color: var(--border-secondary);
+  }
+
+  .hover-theme-interactive:hover {
+    background-color: var(--interactive-hover);
+  }
+}
