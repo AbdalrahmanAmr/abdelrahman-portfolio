@@ -1,69 +1,34 @@
-# Personal Portfolio Website
+# 🌐 Abdelrahman Elsmeay – Portfolio Website
 
-A modern, responsive personal portfolio website featuring Accent Elite color scheme with dark/light mode toggle.
+Welcome to my personal developer portfolio — a fully responsive and fast React-based website showcasing my work, skills, and contact information.
 
-## Features
+---
 
-- 🎨 **Accent Elite Color Scheme** - Elegant purple and gold color palette
-- 🌓 **Dark/Light Mode** - Smooth theme switching with persistent storage
-- 📱 **Fully Responsive** - Works beautifully on all devices
-- ⚡ **Fast & Modern** - Built with React, Vite, and Tailwind CSS
-- 🎭 **Smooth Animations** - Engaging user experience with fade-in and slide-up effects
-- 🧭 **Smooth Scrolling** - Navigation between sections
+## 🚀 Tech Stack
 
-## Sections
+- ⚛️ **React 18 + TypeScript** – Modern frontend library for scalable UI
+- ⚡ **Vite** – Ultra-fast build tool and dev server
+- 🎨 **Tailwind CSS** – Utility-first styling for clean, responsive design
+- 🔍 **TanStack Query (React Query)** – Optimized data fetching and caching
+- 🧩 **Modular Components** – Clean structure and reusable elements
 
-- **Hero** - Eye-catching introduction with call-to-action buttons
-- **About** - Personal story and key statistics
-- **Skills** - Technical skills organized by category
-- **Projects** - Featured projects showcase
-- **Contact** - Contact form and social links
+---
 
-## Getting Started
+## 🧠 Features
 
-### Prerequisites
+- 🌟 Interactive particle background that reacts to cursor movement
+- 💼 Dedicated sections for projects, skills, and contact
+- 🌓 Dark & light theme toggle
+- ⚡ Blazing fast load with lazy loading and Suspense
+- 🔒 Devtools auto-disabled in production
 
-- Node.js (v16 or higher)
-- npm or yarn
+---
 
-### Installation
+## 📁 Project Structure
 
-1. Install dependencies:
-```bash
-npm install
-```
+📝 License
 
-2. Start the development server:
-```bash
-npm run dev
-```
+This project is open source under the MIT License
+.
 
-3. Build for production:
-```bash
-npm run build
-```
-
-4. Preview production build:
-```bash
-npm run preview
-```
-
-## Customization
-
-- Update personal information in component files
-- Modify colors in `tailwind.config.js`
-- Add your projects in `src/components/Projects.jsx`
-- Update social links in `src/components/Contact.jsx`
-
-## Technologies
-
-- React 18
-- Vite
-- Tailwind CSS
-- PostCSS
-- Autoprefixer
-
-## License
-
-MIT
-
+⭐ If you like this project, consider giving it a star on GitHub!

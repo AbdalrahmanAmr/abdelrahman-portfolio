@@ -6,7 +6,7 @@ import {
   PaperAirplaneIcon,
   CheckCircleIcon,
 } from "@heroicons/react/24/outline";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -35,7 +35,11 @@ const Contact = () => {
       icon: FaLinkedin,
       url: "https://www.linkedin.com/in/abdelrahman-elsmeay",
     },
-    { name: "Twitter", icon: FaTwitter, url: "https://twitter.com" },
+    { 
+      name: "Email", 
+      icon: FaEnvelope, 
+      url: "mailto:abdelrahman.elsmeay@gmail.com" 
+    },
   ];
 
   const validateForm = () => {
