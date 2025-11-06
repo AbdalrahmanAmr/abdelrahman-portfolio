@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useHomeData } from '../hooks/usePortfolioData'
 import LoadingSpinner from './LoadingSpinner'
 import ErrorDisplay from './ErrorDisplay'

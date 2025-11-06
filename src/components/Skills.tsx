@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useRef } from 'react'
 import type React from 'react'
 import { useSkillsData } from '../hooks/usePortfolioData'

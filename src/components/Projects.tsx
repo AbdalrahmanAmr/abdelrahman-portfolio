@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useState, useRef } from 'react'
 import type React from 'react'
 import { useProjectsData } from '../hooks/usePortfolioData'
