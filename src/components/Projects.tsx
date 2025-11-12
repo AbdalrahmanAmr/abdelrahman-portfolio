@@ -1,31 +1,35 @@
-// @ts-nocheck
-import { useState, useRef } from 'react'
-import type React from 'react'
-import { useProjectsData } from '../hooks/usePortfolioData'
-import LoadingSpinner from './LoadingSpinner'
-import ErrorDisplay from './ErrorDisplay'
-import { motion, useInView } from 'framer-motion'
-import { 
-  ArrowTopRightOnSquareIcon, 
-  CodeBracketIcon 
-} from '@heroicons/react/24/outline'
+import { useState, useRef } from "react";
+import type React from "react";
+import { useProjectsData } from "../hooks/usePortfolioData";
+import LoadingSpinner from "./LoadingSpinner";
+import ErrorDisplay from "./ErrorDisplay";
+import { motion, useInView } from "framer-motion";
+import {
+  ArrowTopRightOnSquareIcon,
+  CodeBracketIcon,
+} from "@heroicons/react/24/outline";
 
 const Projects = () => {
-  const { data, isLoading, error } = useProjectsData()
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
-  const ref = useRef<HTMLElement>(null)
-  const isInView = useInView(ref as React.RefObject<Element>, { once: true, amount: 0.2 })
+  const { data, isLoading, error } = useProjectsData();
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const ref = useRef<HTMLElement | null>(null);
+  const isInView = useInView(ref as React.RefObject<Element>, {
+    once: true,
+    amount: 0.2,
+  });
 
   if (isLoading) {
     return (
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-theme-secondary">
         <LoadingSpinner />
       </section>
-    )
+    );
   }
   if (error) {
-    console.error('Projects error:', error)
-    return <ErrorDisplay error={error as Error} message="Failed to load projects" />
+    console.error("Projects error:", error);
+    return (
+      <ErrorDisplay error={error as Error} message="Failed to load projects" />
+    );
   }
   if (!data || !data.projects || data.projects.length === 0) {
     return (
@@ -37,10 +41,12 @@ const Projects = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-theme-primary">
             Featured <span className="text-gradient">Projects</span>
           </h2>
-          <p className="text-theme-secondary">No projects available at the moment.</p>
+          <p className="text-theme-secondary">
+            No projects available at the moment.
+          </p>
         </div>
       </section>
-    )
+    );
   }
 
   return (
@@ -77,36 +83,41 @@ const Projects = () => {
               <motion.div
                 className="h-48 bg-gradient-to-br from-accent-primary to-accent-hover flex items-center justify-center relative overflow-hidden"
                 whileHover={{ scale: 1.05 }}
-                transition={{ 
+                transition={{
                   type: "spring",
                   stiffness: 300,
-                  damping: 20
+                  damping: 20,
                 }}
               >
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-                <motion.span 
+                <motion.span
                   className="relative z-10 text-6xl md:text-7xl select-none"
-                  animate={hoveredIndex === index ? { 
-                    scale: 1.1,
-                    rotate: [0, -3, 3, -3, 0],
-                  } : { scale: 1 }}
+                  animate={
+                    hoveredIndex === index
+                      ? {
+                          scale: 1.1,
+                          rotate: [0, -3, 3, -3, 0],
+                        }
+                      : { scale: 1 }
+                  }
                   transition={{
                     scale: {
                       type: "spring",
                       stiffness: 200,
                       damping: 20,
-                      duration: 0.6
+                      duration: 0.6,
                     },
                     rotate: {
                       duration: 0.8,
-                      ease: "easeInOut"
-                    }
+                      ease: "easeInOut",
+                    },
                   }}
                   style={{
-                    filter: hoveredIndex === index 
-                      ? "drop-shadow(0 0 15px rgba(255, 255, 255, 0.4))" 
-                      : "drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2))",
-                    transition: "filter 0.5s ease"
+                    filter:
+                      hoveredIndex === index
+                        ? "drop-shadow(0 0 15px rgba(255, 255, 255, 0.4))"
+                        : "drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2))",
+                    transition: "filter 0.5s ease",
                   }}
                 >
                   {project.image}
@@ -174,7 +185,7 @@ const Projects = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

@@ -101,8 +101,8 @@ export async function projectsLoader(): Promise<ProjectsData> {
           "A full-stack e-commerce solution with payment integration, user authentication, and admin dashboard.",
         tech: ["React", "Node.js", "MongoDB", "Stripe"],
         image: "🛒",
-        projectUrl: "#",
-        sourceUrl: "#",
+        projectUrl: "https://e-commerce-two-ecru-95.vercel.app/",
+        sourceUrl: "https://github.com/AbdalrahmanAmr/E-commerce",
       },
       {
         title: "Task Management App",
